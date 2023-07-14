@@ -4,6 +4,7 @@
 int main (){
     char unit;
     float temp;
+    float temperature;
 
     printf("what is the unit of your temperature:");
     scanf("%c", &unit);
@@ -12,10 +13,18 @@ int main (){
     unit = toupper(unit);
 
     if (unit == 'C'){
-       printf("The temp is currently in Celcius");
+       printf("Enter your temperature:");
+       scanf("%f", &temp);
+
+       temperature = (temp * 9/5) + 32;
+       printf("your temperature in farenheit is: %.1f",temperature);
     }
-    else if (unit == 'C'){
-        printf("The temp is currently in faren");
+    else if (unit == 'F'){
+       printf("Enter your temperature:");
+       scanf("%f", &temp);
+
+       temperature = (temp - 32) * 9/5;
+       printf("your temperature in celcius is: %.1f",temperature);
     }
     else{
         printf("Invalid option");
