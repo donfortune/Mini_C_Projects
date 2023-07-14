@@ -23,7 +23,7 @@ int main (){
        printf("Enter your temperature:");
        scanf("%f", &temp);
 
-       temperature = (temp - 32) * 9/5;
+       temperature = ((temp - 32) * 5) / 9;
        printf("your temperature in celcius is: %.1f",temperature);
     }
     else{
